@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x_tutorial/res/localization/languages.dart';
 import 'package:get_x_tutorial/res/routes/routes.dart';
+
+import 'res/localization/languages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +16,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GetX Demo',
-      translations: Language(),
+      translations: Languages(),
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(primarySwatch: Colors.blue),
-
       getPages: AppRoutes.appRoutes(),
     );
   }
